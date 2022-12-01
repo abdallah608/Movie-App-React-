@@ -12,9 +12,9 @@ export default function People() {
     let {data}=await axios.get(`https://api.themoviedb.org/3/trending/person/day?api_key=556c38300e86354eb4518e077f6843cc&page=${currentPage}`)
     console.log(data.results);
     setItemPeople(data.results)
+    let pagesList = new Array(10).fill(0).map((page,i)=>i+1)
+    setPages(pagesList);
     if(getPeopleData== setItemPeople){
-      let pagesList = new Array(10).fill(0).map((page,i)=>i+1)
-      setPages(pagesList);
       setIsLoading(true)
     }else{
         setIsLoading(false)

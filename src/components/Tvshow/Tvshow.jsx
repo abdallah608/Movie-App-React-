@@ -12,9 +12,9 @@ export default function Tvshow() {
     let {data}=await axios.get(`https://api.themoviedb.org/3/trending/tv/day?api_key=556c38300e86354eb4518e077f6843cc&page=${currentPage}`)
     console.log(data.results);
     setItemTvshow(data.results)
+    let pagesList = new Array(10).fill(0).map((page,i)=>i+1)
+    setPages(pagesList);
     if(geTvshowData == setItemTvshow){
-      let pagesList = new Array(10).fill(0).map((page,i)=>i+1)
-      setPages(pagesList);
       setIsLoading(true)
     }else{
         setIsLoading(false)

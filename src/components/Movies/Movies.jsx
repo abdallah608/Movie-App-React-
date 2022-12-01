@@ -11,10 +11,11 @@ export default function Movies() {
 let getMoviesData= async()=>{
   let {data}=await axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=556c38300e86354eb4518e077f6843cc&page=${currentPage}`)
   setItemMovies(data.results)
-  if(getMoviesData== setItemMovies){
   let pagesList = new Array(10).fill(0).map((page,i)=>i+1)
   setPages(pagesList);
-  setIsLoading(true)
+  if(getMoviesData== setItemMovies){
+  
+    setIsLoading(true)
 }else{
     setIsLoading(false)
 
@@ -80,20 +81,23 @@ useEffect(() => {
         </div>
       )}
     </div>
-        <div className='d-flex align-items-center justify-content-center'>
-        <nav aria-label="...">
-  <ul className="pagination">
-    <li className={currentPage <= 1 ?"page-item disabled" :"page-item"}>
-      <a className="page-link" onClick={()=>perviousPage()}>Previous</a>
-    </li>
-    {Pages.map((page,index)=><><li key={index} className={ page == currentPage ?"page-item active" :"page-item"} aria-current="page">
-      <a className="page-link" onClick={()=>changePage(page)}>{page}</a>
+        <div>
+      <nav aria-label="Page navigation example">
+  <ul className="pagination justify-content-center">
+  <li className={currentPage <= 1 ?"page-item disabled" :"page-item"}>
+     <a className="page-link" onClick={()=>perviousPage()}>Previous</a>
+ </li>
+   {Pages.map((page,index)=><> <li key={index} className={ page == currentPage ?"page-item active" :"page-item"}>
+    <a className="page-link" onClick={()=>changePage(page)} >{page}</a>
     </li></>)}
+    
     <li className={currentPage >= 10 ?"page-item disabled" :"page-item" }>
-      <a className="page-link" onClick={()=>nextPage()}>Next</a>
-    </li>
+     <a className="page-link" onClick={()=>nextPage()}>Next</a>
+   </li>
+
   </ul>
 </nav>
+
         </div>
     </>
   )
