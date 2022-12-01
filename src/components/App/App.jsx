@@ -26,7 +26,7 @@ function App() {
 
   let logOut=()=>{
     localStorage.removeItem('token');
-    setUserData(nul);
+    setUserData(null);
     return <Navigate to='login'/>
   }
   useEffect(() => {
