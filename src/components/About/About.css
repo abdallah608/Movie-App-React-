@@ -1,0 +1,12 @@
+.About-line{
+    width: 8rem;
+    height: .25rem;
+    background-color: white;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    border-color: white;
+    margin-top: 30px;
+}

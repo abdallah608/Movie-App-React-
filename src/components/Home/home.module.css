@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+body {
+  background-color: #0e1118;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.brdr {
+  border: 1px rgba(168, 168, 168, 0.2392156863) solid;
+}/*# sourceMappingURL=Home.module.css.map */

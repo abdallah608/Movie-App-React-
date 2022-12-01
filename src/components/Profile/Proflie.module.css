@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+body {
+  background-color: #0e1118;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.bgCard {
+  background-color: rgba(19, 91, 117, 0.6);
+  color: #fff;
+}/*# sourceMappingURL=Proflie.module.css.map */

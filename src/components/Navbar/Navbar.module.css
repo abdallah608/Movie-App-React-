@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
+body {
+  background-color: #0e1118;
+  color: #fff;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.bgNav {
+  background-color: rgba(13, 19, 37, 0.694);
+}
+
+i {
+  cursor: pointer;
+}/*# sourceMappingURL=Navbar.module.css.map */

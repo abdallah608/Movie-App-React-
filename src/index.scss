@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
+$bgColor:#0e1118;
+$lightBgColor:rgba(13, 19, 37, 0.694);
+$bgTransparent:rgba(19,91,117,.6) ;
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+
+body {
+background-color: $bgColor;
+color: $fontColor;
+font-family: "Montserrat Alternates" , sans-serif;
+}
+a{
+    cursor: pointer;
+}
