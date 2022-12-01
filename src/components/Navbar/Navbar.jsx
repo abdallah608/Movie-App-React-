@@ -49,13 +49,15 @@ export default function Navbar({userData ,logOut}) {
         <i className='fa-brands fa-instagram ms-3'></i>
         <i className='fa-brands fa-youtube ms-3 '></i>
       </div>
-        {userData?
-        <li className="nav-item">
-          <div className='d-flex'>
-            <NavLink  to='profile' className='nav-link m-auto px-2 border-end'>WELCOME : {userData.first_name}</NavLink>
-          <NavLink className="nav-link " aria-current="page" onClick={logOut}>Logout</NavLink>
-          </div>
-        </li>:<> <li className="nav-item">
+        {userData?<>
+          <li className="nav-item">
+          <NavLink  to='profile' className='nav-link m-auto px-2 '>WELCOME : {userData.first_name}</NavLink>
+      </li>
+          <li className="nav-item">
+        <NavLink className="nav-link " aria-current="page" onClick={logOut}>Logout</NavLink>
+      </li>
+        </>
+        :<> <li className="nav-item">
           <NavLink className="nav-link " aria-current="page" to="register">Register</NavLink>
         </li>
         <li className="nav-item"> 
