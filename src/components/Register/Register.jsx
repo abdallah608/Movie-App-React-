@@ -33,7 +33,7 @@ let validateFormData=()=>{
       "string.empty": "Email is required",
       "string.min": "You have enter your Email",
     }),
-    password:Joi.string().required().pattern(new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)).messages({
+    password:Joi.string().required().pattern(new RegExp(/^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/)).messages({
       "string.empty": "Password is required",
       "string.min": "Minimum 8 characters, at least one uppercase letter, one lowercase letter, one number and one special character",
     })

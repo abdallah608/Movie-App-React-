@@ -16,7 +16,7 @@ const [errorList, setErrorList] = useState([])
 let validateFormData=()=>{
   const schema = Joi.object({
     email:Joi.string().required().email({tlds:{allow:['com','net']}}),
-    password:Joi.string().required().pattern(new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/))
+    password:Joi.string().required().pattern(new RegExp(/^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/))
   })
   return schema.validate(user,{abortEarly:false})
 }
@@ -78,7 +78,7 @@ let validateFormData=()=>{
      </div>
      <div className="mb-3 pt-3">
        <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
-        <input onChange={getInputData} type="password" className="form-control" name='password' placeholder="Minimum 8 characters, at least one uppercase letter, one lowercase letter, one number and one special character" />
+        <input onChange={getInputData} type="password" className="form-control" name='password' placeholder="Minimum 8 characters" />
      </div>
       
 

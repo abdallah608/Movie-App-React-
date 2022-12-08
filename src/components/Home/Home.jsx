@@ -120,7 +120,7 @@ useEffect(() => {
         </div>
       </div>
       
-      {itemPeople.slice(0,10).map((item , index)=>
+      {itemPeople?.filter((item)=>item.profile_path !==null).map((item , index)=>
         <div key={index} className="col-md-2">
         <Link className='nav-link' to={`/details/${item.id}/${item.media_type}`}>
         <div className="item ">

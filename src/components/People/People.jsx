@@ -67,8 +67,7 @@ export default function People() {
 
 
     <div className="row gy-4 my-3 py-5">
-
-      {itemPeople.map((item , index)=>
+      {itemPeople?.filter((item)=>item.profile_path !==null).map((item , index)=>
         <div key={index} className="col-md-2">
         <Link className='nav-link' to={`/details/${item.id}/${item.media_type}`}>
         <div className="item ">
@@ -80,6 +79,7 @@ export default function People() {
         </Link>
         </div>
       )}
+     
     </div>
     <div className='d-flex align-items-center justify-content-center'>
         <nav aria-label="...">
