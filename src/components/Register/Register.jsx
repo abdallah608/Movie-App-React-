@@ -35,7 +35,7 @@ let validateFormData=()=>{
     }),
     password:Joi.string().required().pattern(new RegExp(/^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/)).messages({
       "string.empty": "Password is required",
-      "string.min": "Minimum 8 characters, at least one uppercase letter, one lowercase letter, one number and one special character",
+      "string.min": "Minimum 8 characters",
     })
   })
   return schema.validate(user,{abortEarly:false})
@@ -116,7 +116,7 @@ let validateFormData=()=>{
      </div>
      <div className="mb-3 pt-3">
        <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
-        <input onChange={getInputData} type="password" className="form-control" name='password' placeholder="Minimum 8 characters, at least one uppercase letter, one lowercase letter, one number and one special character" />
+        <input onChange={getInputData} type="password" className="form-control" name='password' placeholder="Minimum 8 characters" />
      </div>
       
       <button className='btn btn-info mt-3 float-end'> {loading?`Register`:<i className='fas fa-spinner fa-spin'></i>}</button>
